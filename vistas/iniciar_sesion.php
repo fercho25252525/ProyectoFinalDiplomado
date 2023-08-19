@@ -11,7 +11,7 @@
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 
-<style>
+<style> 
     .bg-card {
         background-color: #7a91bb
     }
@@ -20,14 +20,18 @@
 <body>
     <header>
         <div class="margin">
-            <form class="custom-form" method="post">
+            
+            <form class="custom-form" method="POST">
                 <h1>Login</h1>
                 <input type="text" name="Usuario" placeholder="Usuario" required="required" />
                 <input type="password" name="password" placeholder="Contraseña" required="required" />
-                <button type="button" label="Ingresar" class="p-button-success bg-card"><a class="text-white a"
-                        href="usuario.php">Ingresar</a></button>
-
+                <button type="submit" name="btniniciar" label="Ingresar" class="p-button-success bg-card" value="ok">Ingresar</button>
+                <?php
+                include "../config/conexion.php";
+                include "../controlador/iniciar_sesion.php";
+            ?>
             </form>
+            
             <div align="center" class="mt-4">
                 <button type="button" label="Registrarse" class="exter bg-card text-white"> <a class="text-white a"
                         href="registro.php">Registrarse</a></button>

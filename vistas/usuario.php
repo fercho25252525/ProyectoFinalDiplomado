@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="../img/medalla.png">
     <link rel="stylesheet" href="../css/menu.css">
     <link rel="stylesheet" type="text/css" href="../css/cargando.css">
-  <link rel="stylesheet" type="text/css" href="../css/maquinawrite.css">
+    <link rel="stylesheet" type="text/css" href="../css/maquinawrite.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
@@ -29,7 +29,7 @@
     <nav>
         <ul class="nav nav-tabs bg-nav d-flex bd-highlight pl-5 pr-5">
             <li class="nav-item mt-1 bd-highlight">
-                <a class="nav-link text-white" aria-current="page" href="productos.html">Inicio</a>
+                <a class="nav-link text-white" aria-current="page" href="productos.php">Productos</a>
             </li>
             <li class="nav-item mt-1 bd-highlight">
             </li>
@@ -37,7 +37,7 @@
                 <a class="nav-link text-white" href="usuario.php">Usuarios</a>
             </li>
             <li class="nav-item mt-1 bd-highlight">
-                <a class="nav-link text-white" href="inventario.html">Inventario</a>
+                <a class="nav-link text-white" href="inventario.php">Inventario</a>
             </li>
             <li class="nav-item mt-1 ms-auto bd-highlight">
                 <a class="nav-link text-white d-flex justify-content-end" href="../index.html">Cerrar sesión</a>
@@ -53,9 +53,7 @@
                 <div class="d-flex bd-highlight">
                         <button class="btn btn-dark text-white ms-auto bd-highlight" data-bs-toggle="modal"
                             data-bs-target="#modalCrear"><i class="fa-solid fa-plus m-2"></i>Crear usuario</button>
-                    </div>
-                <?php
-                ?>
+                    </div>              
                     <div class="table-responsive">
                         <table class="table table-striped table-hover mt-3 text-center">
                             <thead class="table-secondary">
@@ -115,36 +113,36 @@
                     include "../controlador/registrar_usuario.php";
                 ?> 
                 <form class="custom-form" method="POST">
-                
+                 
                     <div class="modal-body row">
                         <div class="col-md-6 col-sm-12 mt-3">
                             <label for="exampleFormControlInput1" class="form-label">Usuario</label>
-                            <input type="text" name="Usuario" class="form-control" id="exampleFormControlInput1" placeholder="Usuario">
+                            <input type="text" name="Usuario" class="form-control" id="exampleFormControlInput1" required="required" placeholder="Usuario">
                         </div>
                         <div class="col-md-6 col-sm-12 mt-3">
                             <label for="exampleFormControlInput1" class="form-label">N° Documento</label>
-                            <input type="number" name="documento" class="form-control" id="exampleFormControlInput1"
+                            <input type="number" name="documento" class="form-control" id="exampleFormControlInput1" required="required"
                                 placeholder="Documento usuario">
                         </div>
                         <div class="col-md-6 col-sm-12 mt-3">
                             <label for="exampleFormControlInput1" class="form-label">Nombre</label>
-                            <input type="text" name="Nombres" class="form-control" id="exampleFormControlInput1"
+                            <input type="text" name="Nombres" class="form-control" id="exampleFormControlInput1" required="required"
                                 placeholder="Nombre usuario">
                         </div>
                         <div class="col-md-6 col-sm-12 mt-3">
                             <label for="exampleFormControlInput1" class="form-label">Apellido</label>
-                            <input type="text" name="Apellidos" class="form-control" id="exampleFormControlInput1"
+                            <input type="text" name="Apellidos" class="form-control" id="exampleFormControlInput1" required="required"
                                 placeholder="Apellido usuario">
                         </div>
                         
                         <div class="col-md-6 col-sm-12 mt-3">
                             <label for="exampleFormControlInput1" class="form-label">Correo</label>
-                            <input type="email" name="email" class="form-control" id="exampleFormControlInput1"
+                            <input type="email" name="email" class="form-control" id="exampleFormControlInput1" required="required"
                                 placeholder="Correo usuario">
                         </div>
                         <div class="col-md-6 col-sm-12 mt-3">
                             <label for="exampleFormControlInput1" class="form-label">Contraseña</label>
-                            <input type="password" name="password" class="form-control" id="exampleFormControlInput1"
+                            <input type="password" name="password" class="form-control" id="exampleFormControlInput1" required="required"
                                 placeholder="Contraseña usuario">
                         </div>                   
                     </div>

@@ -8,6 +8,7 @@
             $apellidos = $_POST["Apellidos"];
             $email = $_POST["email"];
             $password = $_POST["password"];
+            
             $sql = $conexion->query("INSERT INTO usuarios (nombre, apellido, num_documento, usuario, correo, contrasena, estado) 
                                     values ('$nombres', '$apellidos', '$documento', '$usuario', '$email', '$password', 'Activo')");
            header("refresh:1.5; url=../vistas/productos.html");  
